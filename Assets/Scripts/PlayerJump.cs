@@ -25,7 +25,7 @@ public class PlayerJump : MonoBehaviour
         {
             rigidBody.AddForce(Vector3.up * jumpForce);
         }
-        Debug.Log(isGrounded);
+        // Debug.Log(isGrounded);
     }
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.tag == "Ground") 
