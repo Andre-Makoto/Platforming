@@ -11,13 +11,11 @@ public class PlayerJump : MonoBehaviour
 
     bool isGrounded;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundCheckRadious, groundLayer);
@@ -30,7 +28,7 @@ public class PlayerJump : MonoBehaviour
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.tag == "Ground") 
         {
-            Debug.Log("I stepped on somenthing!");
+            // Debug.Log("I stepped on somenthing!");
         }
     }
 }

@@ -5,7 +5,7 @@ public class Spinner : MonoBehaviour
     [SerializeField] float xValue = 0f;
     [SerializeField] float yValue = 0.5f;
     [SerializeField] float zValue = 0f;
-    [SerializeField] float force = 10f;
+    [SerializeField] float force = 50f;
     Rigidbody playerRigidBody;
     
     void Start()
