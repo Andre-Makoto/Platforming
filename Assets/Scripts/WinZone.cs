@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class WinZone : MonoBehaviour
 {
+    public GameManager gameManager;
     public GameObject winText;
 
     void Start()
@@ -14,7 +15,8 @@ public class WinZone : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            winText.SetActive(true);
+            gameManager.Win();
+            // winText.SetActive(true);
             // Debug.Log("You win!");
         }
     }
