@@ -14,6 +14,7 @@ public class Movement : MonoBehaviour
     {
         Move();
     }
+        // Metodo Move que pega o Axis horizontal e vertical e usa o metodo translate para movimentar o personagem no update.
         void Move () 
     {
         float xValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;

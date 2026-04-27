@@ -24,7 +24,9 @@ public class Spinner : MonoBehaviour
             playerRigidBody = collision.gameObject.GetComponent<Rigidbody>();
             if (playerRigidBody != null) 
             {
+                // Reseta a velocidade do player.
                 Vector3 direction = (collision.transform.position - transform.position).normalized;
+                // Aplica a força para empurrar o player.
                 playerRigidBody.AddForce(direction * force, ForceMode.Impulse);
             }
         

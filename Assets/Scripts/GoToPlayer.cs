@@ -28,7 +28,9 @@ public class GoToPlayer : MonoBehaviour
             playerRigidBody = collision.gameObject.GetComponent<Rigidbody>();
             if (playerRigidBody != null) 
             {
+                // Normaliza a velocidade.
                 Vector3 direction = (collision.transform.position - transform.position).normalized;
+                // Aplica a força de impulso no player.
                 playerRigidBody.AddForce(direction * force, ForceMode.Impulse);
             }
         }

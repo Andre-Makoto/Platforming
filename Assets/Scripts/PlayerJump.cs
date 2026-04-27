@@ -18,7 +18,9 @@ public class PlayerJump : MonoBehaviour
 
     void Update()
     {
+        // Physics.CheckSphere retorna true or false e guarda na variavel isGrounded
         isGrounded = Physics.CheckSphere(groundCheck.position, groundCheckRadious, groundLayer);
+        // Verifica se foi pressionado o "space" e se o player esta no chão.
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rigidBody.AddForce(Vector3.up * jumpForce);
